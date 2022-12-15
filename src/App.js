@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import SideBar from './components/side-bar';
+import MainSection from './components/main-section';
 
 function App() {
   const [pokemons,setPokemons] = useState([]);
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <SideBar pokemons={pokemons}/>
+      <MainSection/>
     </div>
   );
 }
