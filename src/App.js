@@ -1,23 +1,26 @@
 import './App.css';
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import SideBar from './components/side-bar';
 import MainSection from './components/main-section';
+import UsePlaceHolder from './hooks/use-placeholder';
 
 function App() {
   const [pokemons,setPokemons] = useState([]);
-
-  const fetchPokemons = async ()=>{
-    const data = await fetch('https://pokeapi.co/api/v2/pokemon/').then((response)=> response.json());
-    setPokemons(data.results);
-  }
+  const data = UsePlaceHolder([]);
+  // const fetchPokemons = async ()=>{
+  //   if(data.length !== 0){
+  //     setPokemons(data.results);
+  //   }
+  // }
   useEffect(()=>{
-    fetchPokemons();
-  },[]);
+    setPokemons(data.results);
+  },[])
   return (
     <div className="App">
       <SideBar pokemons={pokemons}/>
-      <MainSection/>
+      {/* <MainSection/> */}
+      {/* {data} */}
     </div>
   );
 }
