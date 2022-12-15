@@ -1,20 +1,21 @@
 import UsePlaceHolder from '../hooks/use-placeholder';
-import { memo, useState } from 'react';
+import { memo } from 'react';
+import './pokemon.css';
 
-const Pokemon = ({id})=>{
-    const [pokemon,setPokemon] = useState([]);
-    const fetchPokemon = async ()=>{
-        const data = await UsePlaceHolder({
-            filter:{
-                id:id
-            }
-        });
-        if(data.length !== 0){
-            setPokemon(data);
+const Pokemon = ({name})=>{
+    const placeholder =  UsePlaceHolder({
+        filter:{
+            id:name
         }
-      }
-      fetchPokemon();
-      return <ul><li>Hello</li></ul>
+    });
+    let image;
+    if(placeholder.length !== 0){
+        image = <img className='image' src={placeholder.sprites.other.home.front_default} alt="poke_image"/>;
+        // console.log(placeholder.sprites.other.home.front_default);
+    }
+    return <div className='pokemon-content'>
+        {image}
+    </div>
       
 }
 export default memo(Pokemon);

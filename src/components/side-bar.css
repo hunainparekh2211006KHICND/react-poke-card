@@ -1,10 +1,10 @@
 .SideBar{
-    background-color:azure;
+    background-color:lightcyan;
     width: 15%;
     padding: 20px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin-top: 15px;
+    margin: 15px 0;
     border: 5px solid #3C68BB;
     border-left: 0;
 }
@@ -27,10 +27,17 @@
     font-weight: bold;
 }
 
-.pokemon-list li{
-    margin: 6px;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-align: justify;
+.pokemon-list li button{
+    padding: 10px;
+    font-size: 22px;
+    text-transform:uppercase;
     color:#FAC706;
+    background:none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pokemon-list li button:hover{
+    color:#3C68BB ;
 }

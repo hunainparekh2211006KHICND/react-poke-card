@@ -7,9 +7,10 @@
 }
 
 .pokemon-data{
-    background-color: azure;
+    background-color: lightcyan;
     height: 800px;
     width: 100%;
     border-radius: 30px;
     border: 5px solid #3C68BB;
+    padding: 20px;
 }

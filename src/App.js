@@ -1,26 +1,16 @@
 import './App.css';
-// import { useEffect } from 'react';
-import { useEffect, useState } from 'react';
 import SideBar from './components/side-bar';
 import MainSection from './components/main-section';
-import UsePlaceHolder from './hooks/use-placeholder';
-
+import { useState } from 'react';
 function App() {
-  const [pokemons,setPokemons] = useState([]);
-  const data = UsePlaceHolder([]);
-  // const fetchPokemons = async ()=>{
-  //   if(data.length !== 0){
-  //     setPokemons(data.results);
-  //   }
-  // }
-  useEffect(()=>{
-    setPokemons(data.results);
-  },[])
+  const [activePokemon,setActivePokemon] = useState('bulbasaur');
+  const handleActivePokemon=(e)=>{
+    setActivePokemon(e);
+  }
   return (
     <div className="App">
-      <SideBar pokemons={pokemons}/>
-      {/* <MainSection/> */}
-      {/* {data} */}
+      <SideBar handleActivePokemon={handleActivePokemon}/>
+      <MainSection activePokemon={activePokemon}/>
     </div>
   );
 }

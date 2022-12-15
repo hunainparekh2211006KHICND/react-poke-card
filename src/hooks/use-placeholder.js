@@ -1,4 +1,3 @@
-import { act } from "@testing-library/react";
 import { useEffect, useState } from "react";
 
 const UsePlaceHolder = ({
