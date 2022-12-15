@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import SideBar from './components/side-bar';
 
 function App() {
+  const [pokemons,setPokemons] = useState([]);
+
+  const fetchPokemons = async ()=>{
+    const data = await fetch('https://pokeapi.co/api/v2/pokemon/').then((response)=> response.json());
+    setPokemons(data.results);
+  }
+  useEffect(()=>{
+    fetchPokemons();
+  },[]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SideBar pokemons={pokemons}/>
     </div>
   );
 }
