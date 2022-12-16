@@ -1,9 +1,10 @@
 .image-div{
-    border: 5px solid #FAC706;
+    border: 5px solid #3C68BB;
     border-radius: 30px;
-    background-color:antiquewhite;
+    background-color:cornsilk;
     width: 400px;
     height: 400px;
+    margin: 10px;
 }
 
 .image{
@@ -20,5 +21,111 @@
 
 .heading h3{
     margin: 5px;
-    color: #FAC706;
+    color: #3C68BB;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.desc-div{
+    border: 5px solid #3C68BB;
+    border-radius: 30px;
+    background-color:lightcyan;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    font-size: 20px;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.up-div{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.up-div div{
+    margin:0 20px;
+}
+
+.up-div div p{
+    text-align: center;
+}
+.up-div div h3{
+    text-align: center;
+}
+
+.btn-content-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn-content-div div button{
+    margin: 10px;
+    min-width: 120px;
+    min-height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Carter One', cursive;
+    font-size: 16px;
+    padding: 10px;
+}
+.btn-content-div div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.stats-div{
+    border: 5px solid #3C68BB;
+    border-radius: 30px;
+    background-color:cornsilk;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+}
+
+.grass{
+    color: white;
+    background-color: #4FA932;
+}
+
+.poison{
+    color: white;
+    background-color:#FF4979;
+}
+
+.fire{
+    color: white;
+    background-color: orange;
+}
+
+.normal{
+    background-color: black;
+    color: white;
+}
+
+.water{
+    background-color: #6ECBF1;
+    color: white;
+}
+
+.bug{
+    background-color: #F2EA81;
+}
+.flying{
+    background-color: #A5692A;
+    color: whitesmoke;
+}
+
+.ability-btn{
+    background-color: #3C68BB;
+    color: whitesmoke;
 }
