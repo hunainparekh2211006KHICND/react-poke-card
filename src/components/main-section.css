@@ -8,9 +8,9 @@
 
 .pokemon-data{
     background-color:bisque;
-    height: 800px;
     width: 100%;
     border-radius: 30px;
     border: 5px solid #3C68BB;
     padding: 20px;
+    padding-bottom: 100px;
 }

@@ -16,6 +16,7 @@ const Pokemon = ({name})=>{
     let weight;
     let types;
     let abilities;
+    let stats;
     if(placeholder.length !== 0){
         image = <img className='image' src={placeholder.sprites.other.home.front_default} alt="poke_image"/>;
         pokemon_name = <h3>{placeholder.name}</h3>
@@ -29,6 +30,7 @@ const Pokemon = ({name})=>{
         types = types.map((item)=> <button className={item.type.name}>{item.type.name}</button>)
         abilities = placeholder.abilities;
         abilities = abilities.map((item)=> <button className='ability-btn'>{item.ability.name}</button>)
+        stats = placeholder.stats.map((item) => <div className='state-item-div'><p>{item.stat.name}:</p><p>{item.base_stat}</p></div>);
     }
     return <div className='pokemon-content'>
         <div className='heading'>
@@ -61,6 +63,8 @@ const Pokemon = ({name})=>{
             </div>
             
             <div className='stats-div'>
+                <div><h2>Stats</h2></div>
+                {stats}
             </div>
         </div>
        
