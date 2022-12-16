@@ -28,6 +28,7 @@
 }
 
 .pokemon-list li button{
+    font-family: 'Carter One', cursive;
     padding: 10px;
     font-size: 22px;
     text-transform:uppercase;

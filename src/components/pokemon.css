@@ -1,6 +1,24 @@
-.pokemon-content .image{
+.image-div{
     border: 5px solid #FAC706;
     border-radius: 30px;
     background-color:antiquewhite;
     width: 400px;
+    height: 400px;
+}
+
+.image{
+    width: 100%;
+}
+
+.heading{
+    display: flex;
+    margin: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.heading h3{
+    margin: 5px;
+    color: #FAC706;
 }
