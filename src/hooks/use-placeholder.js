@@ -6,14 +6,14 @@ const UsePlaceHolder = ({
     const [placeHolder,setPlaceHolder] = useState([]);
     useEffect(()=>{
         async function fetchData(){
-            let url = "https://pokeapi.co/api/v2/pokemon";
+            let api_url = filter.url;
             if(filter?.id){
-                url = `${url}/${filter.id}`
+                api_url = `${api_url}/${filter.id}`
             }
-            await fetch(url).then((result)=> result.json()).then((response)=> setPlaceHolder(response));
+            await fetch(api_url).then((result)=> result.json()).then((response)=> setPlaceHolder(response));
         }
         fetchData();
-    },[filter.id]);
+    },[filter.id,filter.url]);
     return placeHolder;
 }
 export default UsePlaceHolder;

@@ -5,7 +5,8 @@ import './pokemon.css';
 const Pokemon = ({name})=>{
     const placeholder =  UsePlaceHolder({
         filter:{
-            id:name
+            id:name,
+            url:'https://pokeapi.co/api/v2/pokemon',
         }
     });
     let image;

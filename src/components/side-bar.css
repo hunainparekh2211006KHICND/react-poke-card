@@ -45,3 +45,34 @@
     color:#3C68BB ;
     text-shadow: 4px 1px 2px #FAC706;
 }
+
+.prev_next_div{
+    margin-top: 20px;
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prev_next_div button{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.prev_next_div .next_btn{
+    background-color: #3C68BB;
+}
+
+.prev_next_div button:hover{
+    background-color: #000;
+}
+
+
+.prev_next_div .prev_btn{
+    background-color: #FAC706;
+}

@@ -134,6 +134,15 @@
     color: whitesmoke;
 }
 
+.electric{
+    background-color: red;
+    color: white;
+}
+
+.ground{
+    background-color: #C8AC00;
+}
+
 .ability-btn{
     background-color: #3C68BB;
     color: whitesmoke;
