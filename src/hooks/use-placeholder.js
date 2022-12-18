@@ -1,3 +1,4 @@
+import { act } from "@testing-library/react";
 import { useEffect, useState } from "react";
 
 const UsePlaceHolder = ({
@@ -10,7 +11,10 @@ const UsePlaceHolder = ({
             if(filter?.id){
                 api_url = `${api_url}/${filter.id}`
             }
-            await fetch(api_url).then((result)=> result.json()).then((response)=> setPlaceHolder(response));
+           const response = await fetch(api_url).then((result)=> result.json());
+           act(()=>{
+            setPlaceHolder(response);
+           })
         }
         fetchData();
     },[filter.id,filter.url]);

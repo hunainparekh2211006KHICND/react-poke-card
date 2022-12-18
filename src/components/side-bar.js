@@ -1,19 +1,10 @@
 import './side-bar.css';
 import logo from '../logo.png';
 import SideBarItem from "./side-bar-item";
-import UsePlaceHolder from '../hooks/use-placeholder';
-import { useState } from 'react';
 
-const SideBar = ({handleActivePokemon})=>{
-    const [apiUrl,setApiUrl]  = useState('https://pokeapi.co/api/v2/pokemon');
-    const placeholders = UsePlaceHolder({
-        filter:{
-            url: apiUrl,
-        }
-    });
-
+const SideBar = ({handleActivePokemon,placeholders,mainApiUrl})=>{
     const handleUrl = (e)=>{
-        setApiUrl(e.target.value);
+        mainApiUrl(e.target.value);
     }
     return (
     <div className="SideBar">
@@ -22,7 +13,7 @@ const SideBar = ({handleActivePokemon})=>{
         </div>
         <div className='prev_next_div'>
            {placeholders.previous != null ? <button className='prev_btn' onClick={handleUrl} value={placeholders.previous}><i className="fa-solid fa-arrow-left" style={{marginRight:'10px'}}></i>Previous</button> : null} 
-            <button className='next_btn' onClick={handleUrl} value={placeholders.next}>Next<i className="fa-solid fa-arrow-right"style={{marginLeft:'10px'}}></i></button>
+            <button className='next_btn' data-testid="next_btn" onClick={handleUrl} value={placeholders.next}>Next<i className="fa-solid fa-arrow-right"style={{marginLeft:'10px'}}></i></button>
         </div>
         <ul className='pokemon-list'>
             {placeholders.length !== 0 ? placeholders.results.map((pokemon)=> <SideBarItem name={pokemon.name} key={pokemon.name} handleActivePokemon={handleActivePokemon}>{pokemon.name}</SideBarItem>) : null}
