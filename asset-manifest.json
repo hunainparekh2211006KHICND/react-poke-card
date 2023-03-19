@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-poke-card/static/css/main.880e2e4c.css",
+    "main.js": "/react-poke-card/static/js/main.21330eb6.js",
+    "static/js/787.a770acbd.chunk.js": "/react-poke-card/static/js/787.a770acbd.chunk.js",
+    "static/media/bg.jpg": "/react-poke-card/static/media/bg.b85b6bdcfd4c9a39c75b.jpg",
+    "static/media/logo.png": "/react-poke-card/static/media/logo.df1fd31f6c8961789913.png",
+    "index.html": "/react-poke-card/index.html",
+    "main.880e2e4c.css.map": "/react-poke-card/static/css/main.880e2e4c.css.map",
+    "main.21330eb6.js.map": "/react-poke-card/static/js/main.21330eb6.js.map",
+    "787.a770acbd.chunk.js.map": "/react-poke-card/static/js/787.a770acbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.880e2e4c.css",
+    "static/js/main.21330eb6.js"
+  ]
+}
